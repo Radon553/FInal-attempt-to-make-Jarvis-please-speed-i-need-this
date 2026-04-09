@@ -163,7 +163,6 @@ _TOOL_NAMES = {
     "open_app", "run_command", "type_text", "press_key", "click_at", "scroll",
     "spotify_search", "control_spotify", "spotify_set_volume", "spotify_now_playing",
     "read_screen", "find_and_click", "vision_describe",
-    "open_url", "browser_navigate", "youtube_search",
     # Playwright browser tools
     "browser_start", "browser_close",
     "browser_goto", "browser_search", "browser_youtube",
@@ -192,10 +191,6 @@ _CONFIRMATIONS = {
     "read_screen":           lambda _: "Let me have a look.",
     "find_and_click":        lambda a: f"Found {a.get('text', 'it')}.",
     "vision_describe":       lambda _: "Taking a look.",
-    # Web (legacy tools)
-    "open_url":              lambda _: "On it.",
-    "browser_navigate":      lambda _: "Navigating.",
-    "youtube_search":        lambda a: f"Searching YouTube for {a.get('query', 'that')}.",
     # Playwright browser — never say the URL
     "browser_start":         lambda _: "Browser is up.",
     "browser_close":         lambda _: "Browser closed.",
@@ -227,10 +222,8 @@ _CONFIRMATIONS = {
 _FOLLOWUPS = {
     "browser_youtube":       "Want me to play the first one?",
     "browser_search":        "Want me to open one of those?",
-    "youtube_search":        "Want me to play the first result?",
     "spotify_search":        "Which one should I play?",
     "browser_new_tab":       "What should I pull up?",
-    "open_app":              None,   # too generic — skip
 }
 
 
